@@ -28,10 +28,8 @@ body {
   line-height: 1;
   height: 100%;
   font-family:  Palatino,Palatino Linotype,Palatino LT STD,Book Antiqua,Georgia,serif;
-  text-align: center; }
-
-.bg {
-    background-image: url(http://slane2.github.io/Images/IMG_0880.JPG);
+  text-align: center;
+  background-image: url(http://slane2.github.io/Images/IMG_0880.JPG);
     height: 100%; 
     background-position: center;
     background-repeat: no-repeat;
