@@ -20,11 +20,13 @@ time, mark, audio, video {
 	font-variant: normal;
   font-weight: bold;
 	line-height: 12px;
-  vertical-align: baseline; 
+  vertical-align: baseline;
+   height: 100%;
   text-align: center}
 
 body {
   line-height: 1;
+  height: 100%;
   font-family:  Palatino,Palatino Linotype,Palatino LT STD,Book Antiqua,Georgia,serif;
   text-align: center; }
 
