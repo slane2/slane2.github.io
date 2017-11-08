@@ -67,27 +67,31 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(140,150)" to="(220,150)"/>
     <wire from="(280,270)" to="(360,270)"/>
     <wire from="(220,140)" to="(230,140)"/>
-    <comp lib="1" loc="(290,160)" name="XOR Gate">
-      <a name="inputs" val="2"/>
-    </comp>
     <comp lib="0" loc="(360,270)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
+      <a name="label" val="CO"/>
       <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(290,160)" name="XOR Gate">
+      <a name="inputs" val="2"/>
     </comp>
     <comp lib="0" loc="(120,280)" name="Pin">
       <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="1" loc="(280,270)" name="AND Gate">
-      <a name="inputs" val="2"/>
+      <a name="label" val="B"/>
     </comp>
     <comp lib="0" loc="(350,160)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
+      <a name="label" val="Sum"/>
       <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(280,270)" name="AND Gate">
+      <a name="inputs" val="2"/>
     </comp>
     <comp lib="0" loc="(120,150)" name="Pin">
       <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
     </comp>
   </circuit>
 </project>
