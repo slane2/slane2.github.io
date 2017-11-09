@@ -13,11 +13,11 @@ for i in range(4):
         print('Huzzah!')
         break
 for i in range(1):
-    if computer==human:
+    if computer[0]==human[0]:
         Q=human[0]
         print("B")
 for i in range(1,2):
-    if computer==human:
+    if computer[1]==human[1]:
         X=human[1]
         print("B")
 for i in range(2,3):
