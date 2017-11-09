@@ -8,23 +8,32 @@ computer=[first, second, third, fourth]
 print(computer)
 human= input('Make a guess')
 human=list(human)
+count=0
 for i in range(4):
     if computer == human:
         print('Huzzah!')
         break
-for i in range(1):
-    if computer[0]==human[0]:
-        Q=human[0]
-        print("B")
-for i in range(1,2):
-    if computer[1]==human[1]:
-        X=human[1]
-        print("B")
-for i in range(2,3):
-    if computer[2]==human[2]:
-        Y=human[2]
-        print("B")
-for i in range(3,4):
-    if computer[3]==human[3]:
-        Z=human[3]
-        print("B")
+for i in range(4):
+    if computer[i]==human[i]:
+        Q=human[i]
+        X=computer[i]
+        count=count+1
+print("B"*count)
+print(computer)
+print(human)
+for i in range (4):
+    if human[0]==computer[i]:
+        S=human[0]
+        print("W")
+for i in range (4):
+    if human[1]==computer[i]:
+        print("W")
+        T=human[1]
+for i in range (4):
+    if human[2]==computer[i]:
+        print("W")
+        U=human[2]
+for i in range (4):
+    if human[3]==computer[i]:
+        print("W")
+        V=human[3]
