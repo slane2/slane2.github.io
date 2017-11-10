@@ -93,4 +93,43 @@ def main():
     for i in range(20):
         print(random.choice(words))
 
-main()
+#main()
+
+
+def f(x): #assumes x is list
+    for line in x:
+        print(line)
+def insertLetter(spaces, letter, pos):
+    #_ _ _ _ ....
+    #0123456 ....
+    # pos * 2 --> location in spaces
+    pos = pos * 2
+    spaces = spaces[0:pos] + letter + spaces[pos + 1:]
+    return spaces
+word = random.choice(readWords())
+
+pic = [0,0,0,0,0]
+pic[0] = '==========='
+pic[1] = '=         ='
+pic[2] = '=    +    ='
+pic[3] = '==========='
+
+
+spaces = "_ " * len(word)
+
+def printPic(x): #assumes x is list
+    for line in x:
+        print(line)
+
+for i in range(len(word)):
+    guess = input("letter? ")
+
+    if guess in word:
+        pos = word.index(guess)
+        spaces = insertLetter(spaces, guess, pos)
+    else:
+        print("nope")
+
+    pic[4] = spaces
+    printPic(pic)
+    
