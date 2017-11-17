@@ -4,19 +4,18 @@ def readWords():
     with open('wordlist.10000.txt') as wordFile:
         count = 0
         for line in wordFile:
-            if len(line) > 4 and len(line) < 7:
+            if len(line) > 7 and len(line) < 10:
                 wordList.append(line[0:-1])
-def f(x): #assumes x is list
-    for line in x:
-        print(line)
-
+                return wordList
+word = readWords()
+print(word)
 def insertLetter(spaces, letter, pos):
-    #_ _ _ _ ....
-    #0123456 ....
-    # pos * 2 --> location in spaces
     pos = pos * 2
     spaces = spaces[0:pos] + letter + spaces[pos + 1:]
     return spaces
+
+
+spaces = "_ " * len(word)
 
 pic = [1,2,3,4,5,6,7,8,9]
 pic[0] = '         +---------+'
@@ -28,10 +27,9 @@ pic[5] = '      *  l   *     |'
 pic[6] = '        | |        |'
 pic[7] = '        l l        |'
 pic[8] = '                    '
-word = random.choice(wordList)
-spaces = "_ " * len(word)
 
-def printPic(x): #assumes x is list
+
+def printPic(x):
     for line in x:
         print(line)
 
@@ -48,40 +46,3 @@ for i in range(len(word)):
     pic[8] = spaces
     printPic(pic)
     
-"""
-spaces = "_ " * len(word)
-print(spaces)
-spaces = insertLetter(spaces, 'o', 1)
-print(spaces)
-spaces = insertLetter(spaces, 't', 4)
-print(spaces)
-
-guess = input("letter? ")
-
-if guess in word:
-    print("ok")
-else:
-    print("nope")
-"""
-
-
-
-
-
-
-"""
-foo = [5,6,7,8,9,0]
-
-
-def f(x): #assumes x is list
-    for line in x:
-        print(line)
-
-f(pic)
-
-pic[1] = '= *** *** ='
-pic[2] = '= *** *** ='
-
-f(pic)
-f(foo)
-"""
