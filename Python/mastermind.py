@@ -15,25 +15,30 @@ for i in range(4):
         break
 for i in range(4):
     if computer[i]==human[i]:
-        Q=human[i]
-        X=computer[i]
+        human[i]="T"
+        computer[i]="L"
         count=count+1
-print("B"*count)
+Y=("B"*count)
+count1=count
 print(computer)
 print(human)
+
 for i in range (4):
     if human[0]==computer[i]:
-        S=human[0]
-        print("W")
+        human[0]="S"
+        count=count+1
 for i in range (4):
     if human[1]==computer[i]:
-        print("W")
-        T=human[1]
+        human[1]="S"
+        count=count+1
 for i in range (4):
     if human[2]==computer[i]:
-        print("W")
-        U=human[2]
+        human[2]='S'
+        count=count+1
 for i in range (4):
     if human[3]==computer[i]:
-        print("W")
-        V=human[3]
+        human[3]="S"
+        count=count+1
+X=(count-count1)
+hint=list(("W"*X)+Y)
+print(hint)
