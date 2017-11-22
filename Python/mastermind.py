@@ -7,8 +7,8 @@ fourth = random.choice(options)
 computer=[first, second, third, fourth]
 originalcomputer=list(computer)
 print(computer)
-human="C"
-while human!= computer:
+human= "C"
+while human != computer:
     human= input('Make a guess')
     human=list(human)
     count=0
