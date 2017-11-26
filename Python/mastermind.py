@@ -7,7 +7,6 @@ fourth = random.choice(options)
 computer=[first, second, third, fourth]
 originalcomputer=list(computer)
 print(computer)
-<<<<<<< HEAD
 human= "C"
 while human != computer:
     human= input('Make a guess')
@@ -49,8 +48,7 @@ while human != computer:
     hint=list(("W"*X)+Y)
     print(hint)
     computer=list(originalcomputer)
-
-=======
+    
 human= input('Make a guess')
 human=list(human)
 count=0
@@ -82,4 +80,3 @@ for i in range (4):
     if human[3]==computer[i]:
         print("W")
         human[3]=v
->>>>>>> master
