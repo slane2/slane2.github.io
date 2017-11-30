@@ -1,13 +1,10 @@
-import random
-computer= [random.choice(['R','G','B','P'])
+count=0
+x="ssss"
+y="ssssss"
 
-human = input('Guess up to 4 colors')
-
-if userGuess[0]==computer[0]
-           print("B")
-    elif userGuess [1] == computer [1]
-           print("B")
-    elif userGuess [2] == computer [2]
-            print("B")
-    elif userGuess [3] == computer [3]
-            print("B")
+for i in range (len(y)-len(x)+1):
+    print(i)
+    print(y[i:i+len(x)])
+    if x == y[i:i+len(x)]:
+        count=count+1
+print("count = " + str(count))
