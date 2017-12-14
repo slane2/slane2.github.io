@@ -5,55 +5,189 @@
   </head>
   <body>
     <p> <a href="..//index.html">Back to Main Page</a>
+     
       <h1><center>Python</center></h1>
-      <br><br><p><center>Rock Paper Scissors</center></p>
+      <br>     <center><p> <a href="https://www.screencast.com/t/mjkd8oLUziE">Jing of Programs</a></center><br><p><center>Rock Paper Scissors</center></p>
     <p>
         <center><textarea rows="30" cols="90">from random import randint
 options=('Rock','Paper', 'Scissors')
-human= input('Rock, Paper, or Scissors?')
 computer=options[randint(0,2)]
-print(computer)
-if human==computer:
-    print('Tie!');
-elif human=='Rock' and computer=='Paper':
-    print("Sorry Sucka!");
-elif human=='Rock' and computer=='Scissors':
-    print('You Win!');
-elif human=='Paper' and computer=='Scissors':
-    print('Sorry Sucka!');
-elif human=='Paper' and computer=='Rock':
-    print('You Win!');
-elif human=='Scissors' and computer=='Rock':
-    print('Sorry Sucka!');
-elif human=='Scissors' and computer=='Paper':
-    print('You Win!');</textarea></center> 
+count=0
+while count < 6:
+    human= input('Rock, Paper, or Scissors?')
+    if human==computer:
+        print(computer);
+        print('Tie!');
+    elif human=='Rock' and computer=='Paper':
+        print(computer);
+        print("Sorry Sucka!");
+    elif human=='Rock' and computer=='Scissors':
+        print(computer);
+        print('You Win!');
+    elif human=='Paper' and computer=='Scissors':
+        print(computer);
+        print('Sorry Sucka!');
+    elif human=='Paper' and computer=='Rock':
+        print(computer);
+        print('You Win!');
+    elif human=='Scissors' and computer=='Rock':
+        print(computer);
+        print('Sorry Sucka!');
+    elif human=='Scissors' and computer=='Paper':
+        print(computer);
+        print('You Win!');
+    count=count+1</textarea></center> 
     </p>
-      <h2><center>Newb Mind</center></h2>
+      <h2><center>Master Mind</center></h2>
 <p>
-        <center><textarea rows="35" cols="90">import random
+        <center><textarea rows="45" cols="90">import random
 options = ('R','G','B','P')
-human= input('Make a guess')
 first = random.choice(options)
 second = random.choice(options)
 third = random.choice(options)
 fourth = random.choice(options)
 computer=[first, second, third, fourth]
-for i in range(4):
-    if computer == human:
-        print('Huzzah!')
+originalcomputer=list(computer)
+print(computer)
+human= "C"
+while human != computer:
+    human= input('Make a guess')
+    human=list(human)
+    count=0
+    for i in range(4):
+        if computer == human:
+            print('Huzzah!')
+            #print(computer)
+            #print(human)
+            break
+    for i in range(4):
+        if computer[i]==human[i]:
+            human[i]="T"
+            computer[i]="L"
+            count=count+1
+    Y=("B"*count)
+    count1=count
+    for i in range (4):
+        if human[0]==computer[i]:
+            human[0]="S"
+            count=count+1
+    for i in range (4):
+        if human[1]==computer[i]:
+            human[1]="S"
+            count=count+1
+    for i in range (4):
+        if human[2]==computer[i]:
+            human[2]='S'
+            count=count+1
+    for i in range (4):
+        if human[3]==computer[i]:
+            human[3]="S"
+            count=count+1
+    X=(count-count1)
+    X=("W"*X)
+    Z=list(X+Y)
+    print(Z)
+    computer=list(originalcomputer)
+    
+    if human==originalcomputer:
         break
-    elif computer[0]==human[0]:
-        Q=human[0]
-        print("B")
-    elif computer[1]==human[1]:
-        X=human[1]
-        print("B")
-    elif computer[2]==human[2]:
-        Y=human[2]
-        print("B")
-    elif computer[3]==human[3]:
-        Z=human[3]
-        print("B")</textarea></center> 
+</textarea></center> 
+    </p>
+      <h3><center>Hangman</center></h3>
+<p>
+        <center><textarea rows="40" cols="90">rom random import randint
+def readWords():
+    wordList = []
+    with open('wordlist.10000.txt') as wordFile:
+
+        arrayOfWords = []
+        for item in wordFile:
+            arrayOfWords.append(item)
+
+        hangmanWord = arrayOfWords[randint(0,100)]
+        return hangmanWord
+word = readWords()
+print(word)
+
+def insertLetter(spaces, letter, pos):
+    pos = pos * 2
+    spaces = spaces[0:pos] + letter + spaces[pos + 1:]
+    return spaces
+
+spaces = "_ " * len(word)
+
+pic = [1,2,3,4,5,6,7,8,9]
+pic[0] = '         +---------+'
+pic[1] = '         |         |'
+pic[2] = '        ( )        |'
+pic[3] = '       --l--       |'
+pic[4] = '      *  l  *      |'
+pic[5] = '      *  l   *     |'
+pic[6] = '        | |        |'
+pic[7] = '        l l        |'
+pic[8] = '                    '
+
+def printPic(x):
+    for line in x:
+        print(line)
+#main loop
+for i in range(len(word)):
+    guess = input("letter? ")
+
+    if guess in word:
+        pos = word.index(guess)
+        spaces = insertLetter(spaces, guess, pos)
+    else:
+        print("nope")
+        
+    pic[8] = spaces
+    printPic(pic)
+</textarea></center> 
+    </p>
+        <h3><center>Number Converter</center></h3>
+<p>
+        <center><textarea rows="40" cols="90">#convert int to string
+def convertIntToSym(value):
+    if value in range (0,10):
+        sym = chr(value +48)
+    else:
+        sym = chr(value +55)
+    return sym
+    
+#convert sym to decimal value
+def convertSym(sym):
+    ordVal = ord(sym)
+    if ordVal in range(48,58):
+        result = ordVal - 48
+    else:
+        result = ordVal - 55
+    return result
+
+def convertToDecimal (startNum, startBase):
+    powOfX = len(startNum)-1
+    addition=0
+    for ch in startNum:
+        power=startBase**powOfX
+        #print(power)
+        multiplied= convertSym(ch)*power
+        addition = addition + multiplied
+        powOfX = powOfX - 1
+    return addition
+def test():
+    print(convertSym('0') == 0)
+    print(convertSym('1') == 1)
+    print(convertSym('A') == 10)
+    print(convertSym('Z') == 35)
+    print(convertIntToSym(0) == '0')
+    print(convertIntToSym(10) == 'A')
+def main():
+    given= input("input binary number")
+    print(convertToDecimal(given, 16))
+test()
+#main()
+
+
+</textarea></center> 
     </p>
   </body>
 </html>

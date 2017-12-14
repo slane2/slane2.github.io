@@ -35,5 +35,5 @@ def test():
 def main():
     given= input("input binary number")
     print(convertToDecimal(given, 16))
-#test()
-main()
+test()
+#main()
