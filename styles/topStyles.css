@@ -1,5 +1,37 @@
-li {
-    font-size: 18px;
-    color: rgb(55, 0, 255);
-    font-weight: bold;
+h1 {
+	font-size: 70px;
+	letter-spacing: 20px;
+    text-align: center;
+    
+}
+
+a {
+    color: rgb(255, 0, 90);
+    text-decoration: none;
+}
+
+
+body {
+	font-size: 40px;
+	background-image: url("http://funkyimg.com/i/2LZ6N.png");
+    text-align: justify;
+    text-shadow:
+		-1px -1px 0 black,
+		1px -1px 0 black,
+		-1px 1px 0 black,
+		1px 1px 0 black;
+
+	border: 1px solid black;
+    padding-top: 80px;
+    padding-right: 80px;
+    padding-bottom: 80px;
+    padding-left: 80px;
+    
+	word-spacing: 3.8px;
+	letter-spacing: 2px;
+	color: white;
+    background-size: cover;
+    
+    background-repeat: no-repeat;
+    background-position: center top;
 }
