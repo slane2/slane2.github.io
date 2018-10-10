@@ -6,7 +6,12 @@ h1 {
 }
 
 a {
-    color: rgb(255, 0, 90);
+    color: rgb(100, 130, 255);
+    text-shadow:
+		-1px -1px 0 black,
+		1px -1px 0 black,
+		-1px 1px 0 black,
+		1px 1px 0 black;
     text-decoration: none;
 }
 
