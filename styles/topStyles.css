@@ -11,10 +11,10 @@ a {
 		-1.3px -1.3px 0 black,
 		1.3px -1.3px 0 black,
 		-1.3px 1.3px 0 black,
-		1.3px 1.3px 0 black;
+        1.3px 1.3px 0 black;
+    border: 2px solid rgb(10, 90, 25);
     text-decoration: none;
-    background-color: rgb(10, 80, 20);
-    opacity: .3;
+    background: transparent;
     padding: 14px 25px;
     text-align: center;
     display: inline-block;
