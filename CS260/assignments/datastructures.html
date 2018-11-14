@@ -16,9 +16,42 @@
       <li>peek() returns the top item from the stack but does not remove it. It needs no parameters. The stack is not modified.</li>
       <li>isEmpty() tests to see whether the stack is empty. It needs no parameters and returns a boolean value</li>
       <li>size() returns the number of items on the stack. It needs no parameters and returns an integer.</li>
-    <p>
+      </ul>
+      <p>
       <h2><center>Queue</center></h2>
-      
+      A queue is a list strucutured so that items are inserted at the base of the list and removed at the end of the list.
+      First in first out.
+      <ul>
+        <li>Queue() creates a new queue that is empty. It needs no parameters and returns an empty queue.</li>
+        <li>enqueue(item) adds a new item to the rear of the queue. It needs the item and returns nothing.</li>
+        <li>isEmpty() tests to see whether the queue is empty. It needs no parameters and returns a boolean value.</li>
+        <li>size() returns the number of items in the queue. It needs no parameters and returns an integer.</li>
+      </ul></p><p>
+      <h2><center>Dequeue</center></h2>
+      A dequeu is an ordered list in which items can be inserted and from which items can be removed from either end.
+      <ul>
+        <li>Deque() creates a new deque that is empty. It needs no parameters and returns an empty deque.</li>
+        <li>addFront(item) adds a new item to the front of the deque. It needs the item and returns nothing.</li>
+        <li>addRear(item) adds a new item to the rear of the deque. It needs the item and returns nothing.</li>
+        <li>removeFront() removes the front item from the deque. It needs no parameters and returns the item. The deque is modified.</li>
+        <li>removeRear() removes the rear item from the deque. It needs no parameters and returns the item. The deque is modified.</li>
+        <li>isEmpty() tests to see whether the deque is empty. It needs no parameters and returns a boolean value.</li>
+        <li>size() returns the number of items in the deque. It needs no parameters and returns an integer.</li>
+      </ul>
+      </p><p><h2><center>Unordered List</center></h2>
+        <ul>
+          <li>List() creates a new list that is empty. It needs no parameters and returns an empty list.</li>
+          <li>add(item) adds a new item to the list. It needs the item and returns nothing. Assume the item is not already in the list.</li>
+          <li>remove(item) removes the item from the list. It needs the item and modifies the list. Assume the item is present in the list.</li>
+          <li>search(item) searches for the item in the list. It needs the item and returns a boolean value.</li>
+          <li>isEmpty() tests to see whether the list is empty. It needs no parameters and returns a boolean value.</li>
+          <li>size() returns the number of items in the list. It needs no parameters and returns an integer.</li>
+          <li>append(item) adds a new item to the end of the list making it the last item in the collection. It needs the item and returns nothing. Assume the item is not already in the list.</li>
+          <li>index(item) returns the position of item in the list. It needs the item and returns the index. Assume the item is in the list.</li>
+          <li>insert(pos,item) adds a new item to the list at position pos. It needs the item and returns nothing. Assume the item is not already in the list and there are enough existing items to have position pos.</li>
+          <li>pop() removes and returns the last item in the list. It needs nothing and returns an item. Assume the list has at least one item.</li>
+          <li>pop(pos) removes and returns the item at position pos. It needs the position and returns the item. Assume the item is in the list.</li>
+        </ul>
       </p>
       <p><center> <a href="..//index.html">Back to Main Page</a></center></p>
   </body>
