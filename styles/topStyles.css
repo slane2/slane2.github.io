@@ -1,5 +1,18 @@
 h1 {
-	font-size: 85px;
+	font-size: 60px;
+	letter-spacing: 20px;
+    text-align: center;
+    color: white;
+    text-shadow:
+		-1.3px -1.3px 0 black,
+		1.3px -1.3px 0 black,
+		-1.3px 1.3px 0 black,
+        1.3px 1.3px 0 black;
+    
+}
+
+h4 {
+	font-size: 35px;
 	letter-spacing: 20px;
     text-align: center;
     color: white;
@@ -40,15 +53,16 @@ a:hover, a:active {
 
 
 body {
-	font-size: 40px;
-	background-image: url("http://funkyimg.com/i/2MoPB.png");
+    font-size: 25px;
+    background-image: url("http://funkyimg.com/i/2MoPB.png");
+
     text-align: justify;
     color: black;
     text-shadow:
-		-1.3px -1.3px 0 rgb(255, 255, 255,.6),
-		1.3px -1.3px 0 rgb(255,255,255,.6),
-		-1.3px 1.3px 0 rgb(255,255,255,.6),
-		1.3px 1.3px 0 rgb(255,255,255,.6);
+		-1.3px -1.3px 0 rgb(255, 255, 255,.4),
+		1.3px -1.3px 0 rgb(255,255,255,.4),
+		-1.3px 1.3px 0 rgb(255,255,255,.4),
+		1.3px 1.3px 0 rgb(255,255,255,.4);
     
     padding-top: 80px;
     padding-right: 80px;
@@ -59,7 +73,6 @@ body {
 	letter-spacing: 2px;
 	
     background-size: cover;
-    
     background-repeat: no-repeat;
     background-position: center top;
 }
